@@ -1,0 +1,9 @@
+build:
+  type: mvn-quarkus-jib
+  properties:
+    container-name: sample-hello
+deploy:
+  - description: Deploy jib container
+    type: container-deploy
+  - description: Expose endpoint
+    type: public-endpoint
