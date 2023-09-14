@@ -121,5 +121,20 @@
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
     </profile>
+    <profile>
+      <id>healthcheck-for-non-lambdas</id>
+      <activation>
+        <property>
+          <name>!lambda</name>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-smallrye-health</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
   </profiles>
 </project>
+
