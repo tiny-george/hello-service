@@ -1,7 +1,7 @@
 build:
   type: mvn-quarkus-jib
   properties:
-    container-name: sample-hello
+    container-name: extensions/hello-service
     container-tag: latest
 deploy:
   type: container-deploy
